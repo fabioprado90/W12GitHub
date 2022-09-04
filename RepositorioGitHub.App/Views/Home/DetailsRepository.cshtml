@@ -1,0 +1,43 @@
+﻿@model RepositorioGitHub.Dominio.GitHubRepository
+
+@{
+    ViewBag.Title = "Detalhe";
+}
+<link href="~/Content/toastr.css" rel="stylesheet" />
+
+
+
+
+<h2>Detalhes do Repositório</h2>
+
+<table class="table table-striped table-dark">
+    <thead>
+
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Descrição</th>
+            <th scope="col">Linguagem</th>
+            <th scope="col">Ultima Atualização</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">Repositório</th>
+            <td>@Model.Name</td>
+            <td>@Model.Description</td>
+            <td>@Model.Language</td>
+            <td>@Model.UpdatedAt</td>
+        </tr>
+
+    </tbody>
+</table>
+
+<p>
+
+    @Html.ActionLink("Voltar", "GetRepositorie")
+</p>
+
+
+
+
